@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/* 여백 및 기본적인 폰트를 설정  */
+body{
+	margin: 0;
+	padding: 0;
+	font-family: Arial, "MS Trenuchet", sans-serif;
+	
+	word-break: break-all; /* 공백없이 영어로만 되어질 경우 해당구역을 빠져나가므로 이것을 막기위해서 사용한다. */
+}
+
+div#wrap{
+	width: 70%;
+	margin: 0 auto;
+}
+
+header#page_header ul{
+	list-style-type: none; /* 기호를 안보이게 함  */
+	padding: 0;
+}
+
+header#page_header li{
+	display: inline-block;
+	border: solid 1px gray;
+	width: 100px;
+	background-color: #50af8b;
+	text-align: center;
+	font-size: 13pt;
+	font-weight: bold;
+	padding: 10px 20px;
+	margin-right:30px;
+}
+
+div#div_first > ul > li{
+	line-height: 45px;
+}
+
+div#div_second > ul {
+	line-style-type: none;
+	padding-left: 0;
+	
+}
+div#div_second > ul > li {
+	line-height: 25px;
+}
+
+section#posts{
+	border: solid 1px red;
+	float: left; /* 가로방향으로 표시하는데 출발점은 왼쪽에서부터 출발한다  */
+	width: 70%;
+	height: 1000px;
+}
+
+section#posts > article > aside{
+	
+	float: right;
+	width: 35%;
+	height: 180px;
+	font-weight: bold;
+	font-size: 15px;
+	line-height: 30px; /*줄간격  */
+	color: purple;
+	margin-left: 40px; /*margin 은 바깥여백, padding 은 안쪽여백  */
+}
+
+section#sidebar{
+	border: solid 1px blue;
+	float: right;/* 가로방향으로 표시하는데 출발점은 오른쪽에서부터 출발한다  */
+	width: 24%;
+	height: 1000px;
+}
+
+footer#page_footer{
+	border: solid 1px green;
+	clear: both; /*both 는 left 와 right 둘다 이다 / float 을 해제해서 페이지 하단에 안착시킨다 */
+	
+	
+}
+a{
+	text-decoration: none;
+}
+a:link{
+	color: navy;
+	
+}
+a:visited{
+	color: navy;
+}
+

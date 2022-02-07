@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form 에 대해서 알아본다</title>
+<style type="text/css">
+
+	div#container {
+		border: solid 1px gray;
+		width: 40%;
+		margin: 0 auto;
+	}
+	
+	form {
+		margin-top: 100px;
+	}
+	
+	legend {
+		font-size: 20px
+	}
+	
+	label {
+		display: inline-block;
+		width: 150px
+	}
+	
+	ul {
+	/* border: solid 1px red; */
+		list-style-type: none;
+		padding-left: 0;
+	}
+	
+	li{
+		line-height: 40px;
+	}
+	
+	input.btn{
+		width: 100px;
+		height: 40px;
+		margin: 20px 0 0 40px;
+		font-size: 14pt;
+		cursor: pointer; /* 커서 모양 설정  */
+		color: #fff;
+		border: none;
+	}
+	
+	input[type="submit"]{
+		background-color: #001a66;
+	}
+	
+	input[type="reset"]{
+		background-color: #990000;
+	}
+	
+
+</style>
+
+</head>
+
+
+<body>
+	<div id="container">
+		
+		<form action="register.do">
+			<!-- fieldset 태그는 폼을 그룹핑(묶어주는것)하는 역할 -->
+			<fieldset>
+				<!-- legend 태그는 fieldset 에 대한 제목을 지정하는 것  -->
+				<legend>프로젝트 정보</legend>
+				<ul>
+					<li>
+						<label for="prjname">프로젝트명</label> 
+						<input type="text" id="prjname" autofocus placeholder="예: 인사관리프로젝트" required />
+						<!-- autofocus 페이지 로드시 자동으로 커서 포커스 지정 
+							 placeholder="예: 인사관리프로젝트" 은 예시로 미리 적어주는 것 
+							 required : 꼭 입력해야 하는것 지정 -->
+					</li>
+
+					<li>
+						<label for="priority"> 중요도</label> 
+						<input type="range" id="priority" min="0" max="10" step="1" value="5" />
+						<!-- range : 슬라이드 막대로 표시하는 숫자필드  -->
+					</li>
+
+					<li>
+						<label for="estimatedhours">완료예상시간</label> 
+						<input type="number" id="estimatedhours" />
+						<!-- number: 숫자필드 -->
+					</li>
+
+					<li>
+						<label for="startdate">시작날짜</label> 
+						<input type="date" id="startdate" />
+						<!-- date: 날짜필드 -->
+					</li>
+					
+					<li>
+						<label for="month">월</label> 
+						<input type="month" id="month" />
+						<!-- month: 월단위 날짜필드 -->
+					</li>
+					
+					<li>
+						<label for="month">주</label> 
+						<input type="week" id="month" />
+						<!-- week: 주단위 날짜필드 -->
+					</li>
+					
+					<li>
+						<label for="month">시작시간</label> 
+						<input type="time" id="month" />
+						<!-- time: 주단위 날짜필드 -->
+					</li>
+					
+					<li>
+						<label for="email">이메일</label> 
+						<input type="email" id="email" />
+						<!-- email: -->
+					</li>
+					
+					<li>
+						<label for="url">URL</label> 
+						<input type="url" id="url" />
+						<!-- url:  -->
+					</li>
+					
+					<li>
+						<label for="search">검색</label> 
+						<input type="search" id="search" />
+						<!-- search:  -->
+					</li>
+					
+					<li>
+						<label for="projectcolor">프로젝트 색상</label> 
+						<input type="color" id="projectcolor" />
+						<!-- color: 생삭지정 필드 -->
+					</li>
+					
+					<li>
+						<input type="submit" value="전송" class="btn">
+						<input type="reset" value="취소" class="btn">
+					</li>
+				</ul>
+			</fieldset>
+		</form>
+		
+	</div>
+
+
+</body>
+</html>
